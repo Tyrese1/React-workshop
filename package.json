@@ -4,6 +4,7 @@
   "description": "Assignment One: Bootstrap a ReactJS project using Parcel bundler: Setup linting with a precommit hook And a simple demonstration of function and class component",
   "main": "index.js",
   "scripts": {
+    "eslint": "eslint *.js",
     "test": "jest",
     "pretty": "prettier --write --tab-width 4 \"src/**/*.js\"",
     "pre-commit": "eslint"    
