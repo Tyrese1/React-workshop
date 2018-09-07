@@ -6,12 +6,12 @@
   "scripts": {
     "test": "jest",
     "pretty": "prettier --write --tab-width 4 \"src/**/*.js\"",
-    "precommit": "lint-staged && npm test"    
+    "pre-commit": "eslint"    
      }, 
      "lint-staged": {
       "*.js": [
           "npm run pretty",
-          "git add"   ]
+          "eslint --fix", "git add"   ]
   },
   "repository": {
     "type": "git",
