@@ -4,11 +4,15 @@
   "description": "Assignment One: Bootstrap a ReactJS project using Parcel bundler: Setup linting with a precommit hook And a simple demonstration of function and class component",
   "main": "index.js",
   "scripts": {
-    
-   },
- "lint-staged": {
-   "*.js": ["eslint --fix", "git add"]
+    "test": "jest",
+    "pretty": "prettier --write --tab-width 4 \"src/**/*.js\"",
+    "precommit": "lint-staged && npm test"    
      }, 
+     "lint-staged": {
+      "*.js": [
+          "npm run pretty",
+          "git add"   ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tyrese1/React-workshop.git"
